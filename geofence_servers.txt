@@ -10011,7 +10011,8 @@
   "45.77.91.67": "GB",
   "66.245.202.103": "IT",
   "4.232.88.3": "IT",
-  "20.218.217.180": "DE"
+  "20.218.217.180": "DE",
+  "74.248.35.183": "PL"
  },
  "sources": [
   "IP candidates: https://github.com/hudra0/geomate (cod_servers.txt)",
