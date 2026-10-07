@@ -1,0 +1,647 @@
+{
+  "schema": 1,
+  "method": "regional_prior_with_heuristic_hours",
+  "updated_utc": "2026-10-07T05:33:00+00:00",
+  "notes": [
+    "Przewidywane KD jest szacunkiem niskiej pewności; nie odczytuje graczy bieżącego lobby.",
+    "Regionalne liczby LobbyKD pochodzą z ich modelu analitycznego, nie z oficjalnych statystyk Activision. Region wybiera konto użytkownika, nie ustalona lokalizacja serwera.",
+    "Brak wiarygodnego podziału po miastach, BR/Odnowie i dniach tygodnia: te same regionalne wartości dla obu trybów i wszystkich miast regionu.",
+    "Korekty godzin są jawnym założeniem, nie wynikiem pomiaru. Poniedziałek–niedziela mają korektę 0."
+  ],
+  "sources": [
+    {
+      "url": "https://lobbykd.com/api",
+      "snapshot_utc": "2026-10-06T22:10:08+00:00",
+      "scope": "cumulative regional analytical model, user-selected region"
+    },
+    {
+      "url": "https://dispassion.blog/public-matchmaking-in-a-competitive-esport/",
+      "date": "2021-03-07",
+      "scope": "historyczne BR; kontekst wpływu SBMM i pory dnia, nie kalibracja liczbowych korekt dla aktualnej gry"
+    }
+  ],
+  "regions": {
+    "europe": {
+      "base_kd": {
+        "br": 1.17,
+        "resurgence": 1.17
+      },
+      "source_lobbies": 10588,
+      "city_samples": 0,
+      "mode_samples": 0
+    },
+    "usa": {
+      "base_kd": {
+        "br": 1.11,
+        "resurgence": 1.11
+      },
+      "source_lobbies": 12920,
+      "city_samples": 0,
+      "mode_samples": 0
+    },
+    "rest_of_world": {
+      "base_kd": {
+        "br": 1.11,
+        "resurgence": 1.11
+      },
+      "source_lobbies": 477,
+      "city_samples": 0,
+      "mode_samples": 0
+    }
+  },
+  "hour_offsets": [
+    0.08,
+    0.08,
+    0.08,
+    -0.08,
+    -0.08,
+    -0.08,
+    -0.08,
+    -0.05,
+    -0.05,
+    -0.05,
+    -0.05,
+    -0.05,
+    -0.02,
+    -0.02,
+    -0.02,
+    -0.02,
+    -0.02,
+    -0.02,
+    0,
+    0,
+    0,
+    0,
+    0.08,
+    0.08
+  ],
+  "weekday_offsets": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "weekday_order": "Monday=0, Sunday=6",
+  "countries": {
+    "AE": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Dubai"
+    },
+    "AR": {
+      "region": "rest_of_world",
+      "timezone": "America/Argentina/Buenos_Aires"
+    },
+    "AT": {
+      "region": "europe",
+      "timezone": "Europe/Vienna"
+    },
+    "AU": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "AZ": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "BD": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Dhaka"
+    },
+    "BE": {
+      "region": "europe",
+      "timezone": "Europe/Brussels"
+    },
+    "BG": {
+      "region": "europe",
+      "timezone": "Europe/Sofia"
+    },
+    "BY": {
+      "region": "europe",
+      "timezone": "Europe/Minsk"
+    },
+    "BR": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "CA": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "CH": {
+      "region": "europe",
+      "timezone": "Europe/Zurich"
+    },
+    "CL": {
+      "region": "rest_of_world",
+      "timezone": "America/Santiago"
+    },
+    "CN": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Shanghai"
+    },
+    "CR": {
+      "region": "rest_of_world",
+      "timezone": "America/Costa_Rica"
+    },
+    "CZ": {
+      "region": "europe",
+      "timezone": "Europe/Prague"
+    },
+    "DE": {
+      "region": "europe",
+      "timezone": "Europe/Berlin"
+    },
+    "DK": {
+      "region": "europe",
+      "timezone": "Europe/Copenhagen"
+    },
+    "EG": {
+      "region": "rest_of_world",
+      "timezone": "Africa/Cairo"
+    },
+    "ES": {
+      "region": "europe",
+      "timezone": "Europe/Madrid"
+    },
+    "EU": {
+      "region": "europe",
+      "timezone": ""
+    },
+    "FI": {
+      "region": "europe",
+      "timezone": "Europe/Helsinki"
+    },
+    "FR": {
+      "region": "europe",
+      "timezone": "Europe/Paris"
+    },
+    "GB": {
+      "region": "europe",
+      "timezone": "Europe/London"
+    },
+    "GD": {
+      "region": "rest_of_world",
+      "timezone": "America/Grenada"
+    },
+    "GE": {
+      "region": "europe",
+      "timezone": "Asia/Tbilisi"
+    },
+    "GH": {
+      "region": "rest_of_world",
+      "timezone": "Africa/Accra"
+    },
+    "HK": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Hong_Kong"
+    },
+    "HR": {
+      "region": "europe",
+      "timezone": "Europe/Zagreb"
+    },
+    "HU": {
+      "region": "europe",
+      "timezone": "Europe/Budapest"
+    },
+    "IE": {
+      "region": "europe",
+      "timezone": "Europe/Dublin"
+    },
+    "IL": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Jerusalem"
+    },
+    "IN": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Kolkata"
+    },
+    "IT": {
+      "region": "europe",
+      "timezone": "Europe/Rome"
+    },
+    "JP": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Tokyo"
+    },
+    "KR": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Seoul"
+    },
+    "LT": {
+      "region": "europe",
+      "timezone": "Europe/Vilnius"
+    },
+    "MP": {
+      "region": "rest_of_world",
+      "timezone": "Pacific/Saipan"
+    },
+    "MX": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "MY": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    "NG": {
+      "region": "rest_of_world",
+      "timezone": "Africa/Lagos"
+    },
+    "NL": {
+      "region": "europe",
+      "timezone": "Europe/Amsterdam"
+    },
+    "NO": {
+      "region": "europe",
+      "timezone": "Europe/Oslo"
+    },
+    "NZ": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "PE": {
+      "region": "rest_of_world",
+      "timezone": "America/Lima"
+    },
+    "PL": {
+      "region": "europe",
+      "timezone": "Europe/Warsaw"
+    },
+    "PT": {
+      "region": "europe",
+      "timezone": "Europe/Lisbon"
+    },
+    "RO": {
+      "region": "europe",
+      "timezone": "Europe/Bucharest"
+    },
+    "RU": {
+      "region": "europe",
+      "timezone": ""
+    },
+    "SA": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Riyadh"
+    },
+    "SE": {
+      "region": "europe",
+      "timezone": "Europe/Stockholm"
+    },
+    "SG": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Singapore"
+    },
+    "TH": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Bangkok"
+    },
+    "TR": {
+      "region": "rest_of_world",
+      "timezone": "Europe/Istanbul"
+    },
+    "TW": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Taipei"
+    },
+    "UA": {
+      "region": "europe",
+      "timezone": "Europe/Kyiv"
+    },
+    "US": {
+      "region": "usa",
+      "timezone": ""
+    },
+    "VN": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "YE": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Aden"
+    },
+    "ZA": {
+      "region": "rest_of_world",
+      "timezone": "Africa/Johannesburg"
+    },
+    "BH": {
+      "region": "rest_of_world",
+      "timezone": "Asia/Bahrain"
+    },
+    "LU": {
+      "region": "europe",
+      "timezone": "Europe/Luxembourg"
+    },
+    "SK": {
+      "region": "europe",
+      "timezone": "Europe/Bratislava"
+    },
+    "SI": {
+      "region": "europe",
+      "timezone": "Europe/Ljubljana"
+    },
+    "EE": {
+      "region": "europe",
+      "timezone": "Europe/Tallinn"
+    },
+    "LV": {
+      "region": "europe",
+      "timezone": "Europe/Riga"
+    },
+    "ID": {
+      "region": "rest_of_world",
+      "timezone": ""
+    },
+    "GR": {
+      "region": "europe",
+      "timezone": "Europe/Athens"
+    },
+    "CY": {
+      "region": "europe",
+      "timezone": "Asia/Nicosia"
+    },
+    "IS": {
+      "region": "europe",
+      "timezone": "Atlantic/Reykjavik"
+    },
+    "MT": {
+      "region": "europe",
+      "timezone": "Europe/Malta"
+    },
+    "RS": {
+      "region": "europe",
+      "timezone": "Europe/Belgrade"
+    },
+    "ME": {
+      "region": "europe",
+      "timezone": "Europe/Podgorica"
+    },
+    "BA": {
+      "region": "europe",
+      "timezone": "Europe/Sarajevo"
+    }
+  },
+  "cities": [
+    {
+      "country_code": "GB",
+      "city": "Londyn",
+      "region": "europe",
+      "timezone": "Europe/London",
+      "city_samples": 0
+    },
+    {
+      "country_code": "FR",
+      "city": "Paryż",
+      "region": "europe",
+      "timezone": "Europe/Paris",
+      "city_samples": 0
+    },
+    {
+      "country_code": "NL",
+      "city": "Amsterdam",
+      "region": "europe",
+      "timezone": "Europe/Amsterdam",
+      "city_samples": 0
+    },
+    {
+      "country_code": "DE",
+      "city": "Frankfurt",
+      "region": "europe",
+      "timezone": "Europe/Berlin",
+      "city_samples": 0
+    },
+    {
+      "country_code": "PL",
+      "city": "Warszawa",
+      "region": "europe",
+      "timezone": "Europe/Warsaw",
+      "city_samples": 0
+    },
+    {
+      "country_code": "IT",
+      "city": "Mediolan",
+      "region": "europe",
+      "timezone": "Europe/Rome",
+      "city_samples": 0
+    },
+    {
+      "country_code": "ES",
+      "city": "Madryt",
+      "region": "europe",
+      "timezone": "Europe/Madrid",
+      "city_samples": 0
+    },
+    {
+      "country_code": "FI",
+      "city": "Helsinki",
+      "region": "europe",
+      "timezone": "Europe/Helsinki",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Portland",
+      "region": "usa",
+      "timezone": "America/Los_Angeles",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Salt Lake City",
+      "region": "usa",
+      "timezone": "America/Denver",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Los Angeles",
+      "region": "usa",
+      "timezone": "America/Los_Angeles",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Dallas",
+      "region": "usa",
+      "timezone": "America/Chicago",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Chicago",
+      "region": "usa",
+      "timezone": "America/Chicago",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Columbus",
+      "region": "usa",
+      "timezone": "America/New_York",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Waszyngton",
+      "region": "usa",
+      "timezone": "America/New_York",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Atlanta",
+      "region": "usa",
+      "timezone": "America/New_York",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Miami",
+      "region": "usa",
+      "timezone": "America/New_York",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "San Diego",
+      "region": "usa",
+      "timezone": "America/Los_Angeles",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Las Vegas",
+      "region": "usa",
+      "timezone": "America/Los_Angeles",
+      "city_samples": 0
+    },
+    {
+      "country_code": "US",
+      "city": "Phoenix",
+      "region": "usa",
+      "timezone": "America/Phoenix",
+      "city_samples": 0
+    },
+    {
+      "country_code": "CA",
+      "city": "Montreal",
+      "region": "rest_of_world",
+      "timezone": "America/Toronto",
+      "city_samples": 0
+    },
+    {
+      "country_code": "CA",
+      "city": "Vancouver",
+      "region": "rest_of_world",
+      "timezone": "America/Vancouver",
+      "city_samples": 0
+    },
+    {
+      "country_code": "CA",
+      "city": "Québec",
+      "region": "rest_of_world",
+      "timezone": "America/Toronto",
+      "city_samples": 0
+    },
+    {
+      "country_code": "CL",
+      "city": "Santiago",
+      "region": "rest_of_world",
+      "timezone": "America/Santiago",
+      "city_samples": 0
+    },
+    {
+      "country_code": "BR",
+      "city": "São Paulo",
+      "region": "rest_of_world",
+      "timezone": "America/Sao_Paulo",
+      "city_samples": 0
+    },
+    {
+      "country_code": "NG",
+      "city": "Lagos",
+      "region": "rest_of_world",
+      "timezone": "Africa/Lagos",
+      "city_samples": 0
+    },
+    {
+      "country_code": "ZA",
+      "city": "Kapsztad",
+      "region": "rest_of_world",
+      "timezone": "Africa/Johannesburg",
+      "city_samples": 0
+    },
+    {
+      "country_code": "ZA",
+      "city": "Johannesburg",
+      "region": "rest_of_world",
+      "timezone": "Africa/Johannesburg",
+      "city_samples": 0
+    },
+    {
+      "country_code": "SA",
+      "city": "Rijad",
+      "region": "rest_of_world",
+      "timezone": "Asia/Riyadh",
+      "city_samples": 0
+    },
+    {
+      "country_code": "AE",
+      "city": "Dubaj",
+      "region": "rest_of_world",
+      "timezone": "Asia/Dubai",
+      "city_samples": 0
+    },
+    {
+      "country_code": "SG",
+      "city": "Singapur",
+      "region": "rest_of_world",
+      "timezone": "Asia/Singapore",
+      "city_samples": 0
+    },
+    {
+      "country_code": "HK",
+      "city": "Hongkong",
+      "region": "rest_of_world",
+      "timezone": "Asia/Hong_Kong",
+      "city_samples": 0
+    },
+    {
+      "country_code": "KR",
+      "city": "Seul",
+      "region": "rest_of_world",
+      "timezone": "Asia/Seoul",
+      "city_samples": 0
+    },
+    {
+      "country_code": "JP",
+      "city": "Tokio",
+      "region": "rest_of_world",
+      "timezone": "Asia/Tokyo",
+      "city_samples": 0
+    },
+    {
+      "country_code": "IN",
+      "city": "Pune",
+      "region": "rest_of_world",
+      "timezone": "Asia/Kolkata",
+      "city_samples": 0
+    },
+    {
+      "country_code": "IN",
+      "city": "Chennai",
+      "region": "rest_of_world",
+      "timezone": "Asia/Kolkata",
+      "city_samples": 0
+    },
+    {
+      "country_code": "AU",
+      "city": "Sydney",
+      "region": "rest_of_world",
+      "timezone": "Australia/Sydney",
+      "city_samples": 0
+    }
+  ]
+}
