@@ -9988,7 +9988,8 @@
   "66.42.127.157": "US",
   "155.138.199.19": "US",
   "64.177.48.150": "US",
-  "66.42.82.45": "US"
+  "66.42.82.45": "US",
+  "96.30.197.251": "US"
  },
  "sources": [
   "IP candidates: https://github.com/hudra0/geomate (cod_servers.txt)",
